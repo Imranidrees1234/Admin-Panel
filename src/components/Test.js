@@ -1,7 +1,7 @@
 // import React, { useState, useEffect } from "react";
 // import { io } from "socket.io-client";
 
-// const adminSocket = io("http://localhost:5005/admin");
+// const adminSocket = io("https://admin-backend-production-4ca3.up.railway.app/admin");
 
 // const Test = () => {
 //     const [requests, setRequests] = useState([]);
@@ -219,7 +219,7 @@ export default Test;
 // import { io } from "socket.io-client";
 // import axios from "axios";
 
-// const socket = io("http://localhost:5005", {
+// const socket = io("https://admin-backend-production-4ca3.up.railway.app/", {
 //   reconnectionAttempts: 5, // Retry connection 5 times if it fails
 //   reconnectionDelay: 2000, // Wait 2 seconds before retrying
 // });
@@ -272,7 +272,7 @@ export default Test;
 //       formData.append("image", selectedFile);
 
 //       try {
-//         const uploadResponse = await axios.post("http://localhost:5005/api/upload", formData, {
+//         const uploadResponse = await axios.post("https://admin-backend-production-4ca3.up.railway.app//api/upload", formData, {
 //           headers: { "Content-Type": "multipart/form-data" },
 //         });
 
@@ -280,7 +280,7 @@ export default Test;
 //           imageUrl = uploadResponse.data.imageUrl;
 //           console.log("📷 Image uploaded:", imageUrl);
 
-//           await axios.post("http://localhost:5005/api/save-image", { imageUrl });
+//           await axios.post("https://admin-backend-production-4ca3.up.railway.app/api/save-image", { imageUrl });
 //         } else {
 //           alert("Failed to upload image.");
 //           return;
@@ -308,7 +308,7 @@ export default Test;
 
 //   const fetchImages = async () => {
 //     try {
-//       const response = await axios.get("http://localhost:5005/api/images");
+//       const response = await axios.get("https://admin-backend-production-4ca3.up.railway.app/api/images");
 //       setImages(response.data.images);
 //     } catch (error) {
 //       console.error("❌ Failed to fetch images:", error);
