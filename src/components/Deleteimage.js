@@ -6,7 +6,7 @@ const DeleteImage = () => {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    fetch("https://admin-backend-production-4ca3.up.railway.app/api/images")
+    fetch("https://database-backend-production.up.railway.app/api/images")
       .then((response) => response.json())
       .then((data) => {
         if (data.images && Array.isArray(data.images)) {
@@ -31,7 +31,7 @@ const DeleteImage = () => {
     if (!confirmDelete) return;
   
     try {
-      const response = await fetch(`https://admin-backend-production-4ca3.up.railway.app/api/images/${selectedImage}`, {
+      const response = await fetch(`https://database-backend-production.up.railway.app/api/images/${selectedImage}`, {
         method: "DELETE",
       });
   
