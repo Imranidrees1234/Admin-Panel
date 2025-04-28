@@ -56,7 +56,7 @@ import { io } from "socket.io-client";
 import axios from "axios";
 
 const socket = io("https://database-backend-production.up.railway.app/");
-const adminSocket = io("https://admin-backend-production-4ca3.up.railway.app/");
+const adminSocket = io("https://database-backend-production.up.railway.app/");
 
 const Test = () => {
   const [requests, setRequests] = useState([]);
@@ -106,13 +106,13 @@ const Test = () => {
       formData.append("image", selectedFile);
 
       try {
-        const response = await axios.post("https://admin-backend-production-4ca3.up.railway.app/api/upload", formData, {
+        const response = await axios.post("https://database-backend-production.up.railway.app/api/upload", formData, {
           headers: { "Content-Type": "multipart/form-data" },
         });
 
         if (response.data.imageUrl) {
           imageUrl = response.data.imageUrl;
-          await axios.post("https://admin-backend-production-4ca3.up.railway.app/api/save-image", { imageUrl });
+          await axios.post("https://database-backend-production.up.railway.app/api/save-image", { imageUrl });
         } else {
           alert("Failed to upload image.");
           return;
@@ -148,7 +148,7 @@ const Test = () => {
 
   const fetchImages = async () => {
     try {
-      const response = await axios.get("https://admin-backend-production-4ca3.up.railway.app/api/images");
+      const response = await axios.get("https://database-backend-production.up.railway.app/api/images");
       setImages(response.data.images);
     } catch (error) {
       console.error("Failed to fetch images:", error);
