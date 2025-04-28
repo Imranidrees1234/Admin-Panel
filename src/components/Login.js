@@ -11,7 +11,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const { data } = await axios.post("https://admin-backend-production-4ca3.up.railway.app/api/auth/login", { email, password });
+            const { data } = await axios.post("https://database-backend-production.up.railway.app/api/auth/login", { email, password });
 
             // Store token in localStorage
             localStorage.setItem("userToken", data.token);
