@@ -24,7 +24,7 @@ const UploadImage = () => {
     formData.append("image", image);
 
     try {
-      const res = await axios.post("https://admin-backend-production-4ca3.up.railway.app/api/upload", formData, {
+      const res = await axios.post("https://database-backend-production.up.railway.app/api/upload", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
