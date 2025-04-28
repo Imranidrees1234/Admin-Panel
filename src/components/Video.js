@@ -9,7 +9,7 @@ const Video = () => {
   const [driverId, setDriverId] = useState("");
 
   useEffect(() => {
-    socket.current = io("https://admin-backend-production-4ca3.up.railway.app/");
+    socket.current = io("https://database-backend-production.up.railway.app/");
 
     socket.current.emit("register_admin", adminId);
     console.log(`📌 Admin registered: ${adminId}`);
