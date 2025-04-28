@@ -20,7 +20,7 @@ const ViewUser = () => {
                 }
     
                 // Make request with Authorization header
-                const { data } = await axios.get("https://admin-backend-production-4ca3.up.railway.app/api/users", {
+                const { data } = await axios.get("https://database-backend-production.up.railway.app/api/users", {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }
