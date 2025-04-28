@@ -14,7 +14,7 @@ const DeleteUser = () => {
                     setError("Authorization token missing");
                     return;
                 }
-                const { data } = await axios.get("https://admin-backend-production-4ca3.up.railway.app/api/users", {
+                const { data } = await axios.get("https://database-backend-production.up.railway.app/api/users", {
                     headers: { Authorization: `Bearer ${token}` },
                 });
                 setUsers(data);
@@ -41,7 +41,7 @@ const DeleteUser = () => {
     
             console.log("Attempting to delete user with ID:", userId);
     
-            const response = await axios.delete(`https://admin-backend-production-4ca3.up.railway.app/api/users/${userId}`, {
+            const response = await axios.delete(`https://database-backend-production.up.railway.app/api/users/${userId}`, {
                 headers: { Authorization: `Bearer ${token}` },
             });
     
