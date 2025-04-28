@@ -40,8 +40,8 @@ const TrackDriver = () => {
     // socket.current = io("http://localhost:5000/");
     // adminSocket.current = io("ws://localhost:5005/admin");
     // const SERVER_URL = "ws://https://admin-backend-production-4ca3.up.railway.app/"; // Change this to your Railway deployment URL in production
-socket.current = io("https://livelocation-backend-production.up.railway.app/");
-adminSocket.current = io("https://admin-backend-production-4ca3.up.railway.app/admin");
+socket.current = io("https://location-backend-production.up.railway.app/");
+adminSocket.current = io("https://database-backend-production.up.railway.app/admin");
 
     socket.current.on("connect", () => {
       console.log("Connected to WebSocket server");
