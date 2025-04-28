@@ -13,7 +13,7 @@ const UpdateUserRole = () => {
                     setError("Authorization token missing");
                     return;
                 }
-                const { data } = await axios.get("https://admin-backend-production-4ca3.up.railway.app/api/users", {
+                const { data } = await axios.get("https://database-backend-production.up.railway.app/api/users", {
                     headers: { Authorization: `Bearer ${token}` },
                 });
                 setUsers(data);
@@ -29,7 +29,7 @@ const UpdateUserRole = () => {
         try {
             const token = localStorage.getItem("userToken");
             await axios.put(
-                `https://admin-backend-production-4ca3.up.railway.app/api/users/${userId}/role`,
+                `https://database-backend-production.up.railway.app/api/users/${userId}/role`,
                 { role: newRole },
                 { headers: { Authorization: `Bearer ${token}` } }
             );
