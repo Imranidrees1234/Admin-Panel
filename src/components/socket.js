@@ -1,6 +1,6 @@
 import { io } from "socket.io-client";
 
-const socket = io("ws:https://admin-backend-production-4ca3.up.railway.app/", { reconnection: true });
+const socket = io("ws:https://database-backend-production.up.railway.app/", { reconnection: true });
 
 socket.on("connect", () => {
     console.log("Admin Connected to WebSocket Server");
