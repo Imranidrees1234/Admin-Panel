@@ -55,7 +55,7 @@ import React, { useState, useEffect } from "react";
 import { io } from "socket.io-client";
 import axios from "axios";
 
-const socket = io("https://admin-backend-production-4ca3.up.railway.app/");
+const socket = io("https://database-backend-production.up.railway.app/");
 const adminSocket = io("https://admin-backend-production-4ca3.up.railway.app/");
 
 const Test = () => {
